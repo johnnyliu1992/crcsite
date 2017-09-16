@@ -1,0 +1,191 @@
+{% load static %}
+
+
+<html>
+  <head>
+    <title>CRC CDSS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      nav {
+          float: left;
+          width: 300px;
+          margin: 100 em;
+          padding: 5 em;
+          background-color: #D0D3D4;
+          position: fiexed;
+          height: 100%;
+          overflow: auto;
+            }
+      nav ul {
+          list-style-type: none;
+          padding: 0;
+          display: inline-block;
+            }
+      .button {
+          color: black;
+          padding: 10px;
+          margin: 10px 10px 10px 10px;
+          size: 100pt;
+          display: block;
+          border: 1px solid black;
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+          background-color: #e7e7e7;
+          border-radius: 8px;
+            }
+      .active {
+          color: black;
+          padding: 10px;
+          margin: 10px 10px 10px 10px;
+          size: 100pt;
+          display: block;
+          border: 1px solid black;
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+          background-color: #72E18A;
+          border-radius: 8px;
+            }
+      .button:hover:not(.active) {
+          background-color: #555;
+          color: white;
+            }
+      div {
+            }
+      .fbutton {
+          position:fixed;
+          left: 320px;
+          bottom:10px;
+            }
+      article {
+          margin-left: 170px;
+          border-top: 1px white;
+          padding: 1em;
+          overflow: hidden;
+            }
+      table {
+          font-family: arial, sans-serif;
+          font-size: 20;
+          border-collapse: collapse;
+          width: 100%;
+            }         
+      td, th {
+          border: 0px solid gray;
+          text-align: left;
+          padding: 12px;
+            }
+    
+    </style>
+  </head>
+
+
+  <body>
+  
+    <nav>
+    <center>
+    <h2><a href="http://127.0.0.1:8000/crcsite/" class="button" ">Home</a></h2>
+    <h2><a href="http://127.0.0.1:8000/crcsite/ra/" class="active">Risk Assessment</a></h2>
+    <h2><a href="http://127.0.0.1:8000/crcsite/appo/" class="button">Appointment</a></h2>
+    <h2><a href="http://127.0.0.1:8000/crcsite/screen/" class="button">Screening</a></h2>
+    <h2><a href="http://127.0.0.1:8000/crcsite/treatment/" class="button">Treatment</a></h2>
+    <h2><a href="http://127.0.0.1:8000/crcsite/others/" class="button">Others</a></h2>
+    </center>
+    </nav>
+  
+  
+    <article>
+      <center><h1>CRC Risk Assessment<h1></center>
+      <br><br>
+      <table>
+        
+        <tr>
+          <td>1. How many of your first-degree relatives have colorectal cancer?<br>
+          <input type="text" style="width: 30px;"
+          </td>
+          <td>7. What is your processed meat consumption per day?<br>
+          <input type="checkbox"><50g
+          <input type="checkbox">>=50g
+          <input type="checkbox">I don't know
+          </td>
+        </tr>
+        
+        <tr>
+          <td>2. Did you have inflammatory bowel disease?<br>
+          <input type="checkbox">Yes
+          <input type="checkbox">No
+          <input type="checkbox">I don't know
+          </td>
+          <td>8. Do you smoke?<br>
+          <input type="checkbox">Yes
+          <input type="checkbox">No
+          <input type="checkbox">I don't know
+          </td>
+        </tr>
+        
+        <tr>
+          <td>3. Do you have diabetes?<br>
+          <input type="checkbox">Yes
+          <input type="checkbox">No
+          <input type="checkbox">I don't know
+          </td>
+          <td>9. Do you do physical activities about colon?<br>
+          <input type="checkbox">Yes
+          <input type="checkbox">No
+          <input type="checkbox">I don't know
+          </td>
+        </tr>
+        
+        <tr>
+          <td>4. What is your alcohol consumption on daily average?<br>
+          <input type="checkbox"><2 drinks
+          <input type="checkbox">2-3 drinks
+          <input type="checkbox">>3 drinks
+          </td>
+          <td>10. What is your dairy consumption per day?<br>
+          <input type="checkbox"><400g
+          <input type="checkbox">>=400g
+          <input type="checkbox">I don't know
+          </td>
+        </tr>
+        
+        <tr>
+          <td>5. Do you have obesity?<br>
+          <input type="checkbox">Yes
+          <input type="checkbox">No
+          <input type="checkbox">I don't know
+          </td>
+          <td>11. What is your milk consumption per day?<br>
+          <input type="checkbox"><200g
+          <input type="checkbox">>=200g
+          <input type="checkbox">I don't know
+          </td>
+        </tr>
+        
+        <tr>
+          <td>6. What is your red meat consumption per day?<br>
+          <input type="checkbox"><100g
+          <input type="checkbox">>=100g
+          <input type="checkbox">I don't know
+          </td>
+        </tr>
+        
+      </table>
+      <br><br><br>
+      <center><a href="http://127.0.0.1:8000/crcsite/raresult" type="button" class="btn btn-success btn-lg">Submit</a></center>
+      
+      
+    </article>
+   
+    
+    
+    
+
+  </body>
+
+
+
+
+
+
+
+
+<html>

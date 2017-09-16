@@ -1,0 +1,1 @@
+web: gunicorn crc.wsgi:application --log-file -

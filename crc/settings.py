@@ -117,6 +117,8 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 
+ALLOWED_HOSTS = ['glacial-waters-22875.herokuapp.com']
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 

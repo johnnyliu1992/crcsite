@@ -23,6 +23,12 @@
           padding: 0;
           display: inline-block;
             }
+      article {
+          margin-left: 170px;
+          border-top: 1px white;
+          padding: 1em;
+          overflow: hidden;
+            }
       .button {
           color: black;
           padding: 10px;
@@ -49,7 +55,8 @@
           background-color: #555;
           color: white;
             }
-      div {
+      li {
+          floatL left;
             }
       .fbutton {
           position:fixed;
@@ -63,7 +70,16 @@
           text-align: center;
           padding: 0px 50px 20px 50px;
             }
-    
+      h1 {
+          font-family: "Arial Black", Gadget, sans-serif;
+          text-align: center;
+            }
+
+       ul {
+          display: inline-block;
+           text-align: left;
+            }
+
     </style>
   </head>
 
@@ -81,46 +97,77 @@
     </center>
     </nav>
   
-  
+    <article>
     <br><br><br><br>
+    
+    
     <center>
-    <h1>CRC Risk Assessment Result<h1>
-    <br><br>
-    <h1>Risk Score: 9.7<h1>
-    
-    <h1>Risk Level: <font color="red">High</font><h1><font size="2">
-    <a href="" type="button" class="btn btn-default" target="popup" onclick="window.open('{% url 'explain' %}','name','resizable,height=260,width=370')">What does it mean?</a></font>
-    
-    
+    <h1>CRC Risk Assessment Result</h1>
     <br><br><br><br><br>
+    <h2>Risk Score: 9.7</h2>
+    
+    <h2>Risk Level: <font color="red">High</font></h2>
+    </center>
+    
+    
+    
+    <br>
+    
+    <center>
+    <ul>
+    <li>
+    <a onclick="window.open('{% url 'explain' %}')">What does it mean?</a>
+    </li>
+    
+    <li>
+    <a onclick="window.open('')">Risk Factors</a>
+    </li>
+    
+    <li>
+    <a onclick="window.open('')">Recommendations For Preventative Care</a>
+    </li>
+    </ul>
+    </center>
+    
+    <br><br><br><br>
+    
+    <a href="{% url 'screen' %}" class="btn btn-default btn-lg" style="position: absolute; right: 100px;">Next Step >></a>
+ 
+    
+    
+    <br><br><br><br><br><br><br><br>
+    <center>
     <table>
       <tr>
         <td>
-          <a href="#" class="btn btn-success btn-lg">
+          <a href="#" class="btn btn-default btn-md">
           <span class="glyphicon glyphicon-print"></span> Print     
           </a>
         </td>
+        
         <td>
-          <a href="#" class="btn btn-success btn-lg">
+          <a href="#" class="btn btn-default btn-md">
           <span class="glyphicon glyphicon-envelope"></span> Email 
           </a>
         </td>
-      </tr>
-      
-      <tr>
+        
         <td>
-          <a href="#" class="btn btn-success btn-lg">
+          <a href="#" class="btn btn-default btn-md">
           <span class="glyphicon glyphicon-envelope"></span> Send to EHR 
           </a>
         </td>
-        <td>
-          <a href="#" class="btn btn-success btn-lg">
-          <span class="glyphicon glyphicon-calendar"></span> Appointment 
-          </a>
-        </td>
+  
       </tr>
     </table>
     </center>
+    </article>
+    
+    
+    
+    
+    
+    
+    
     
   </body>
 

@@ -50,7 +50,30 @@
           background-color: #555;
           color: white;
             }
-    
+            
+      article {
+          margin-left: 170px;
+          border-top: 1px white;
+          padding: 1em;
+          overflow: hidden;
+            }
+      h1 {
+          font-family: "Arial Black", Gadget, sans-serif;
+          text-align: center;
+            }
+      table {
+          font-family: arial, sans-serif;
+          font-size: 20;
+          border-collapse: collapse;
+          width: 100%;
+            }         
+      td, th {
+          border: 0px solid gray;
+          text-align: left;
+          padding: 12px;
+          line-height: 90%;
+          vertical-align: top;
+            }
     </style>
   </head>
 
@@ -67,11 +90,57 @@
     <h2><a href="{% url 'others' %}" class="button">Others</a></h2>
     </center>
     </nav>
-  
-  
-  appointment
-  
-  
+    <article>
+    
+    <h1>Appointment</h1><br>
+    
+    <table>
+      <tr>
+      <td>
+      First Name: <input type="text" style='width:100%'><br><br>
+      
+      Last Name: <input type="text" style='width:100%'><br><br>
+      
+      Gender: &emsp;<input type="radio" name="gender">Male
+              <input type="radio" name="gender">Female<br><br>
+      
+      Email: <input type="text" style='width:100%'><br><br>
+      
+      Mobile: <input type="text" style='width:100%'><br><br>
+      
+      Street Address1: <input type="text" style='width:100%'><br><br>
+      
+      Street Address2: <input type="text" style='width:100%'><br><br>
+      
+      City: <input type="text" style='width:100%'><br><br>
+      
+      State: <input type="text" style='width:100%'><br><br>
+      
+      Zip: <input type="text" style='width:100%'><br><br>
+      
+      Country: <input type="text" style='width:100%'><br><br>
+      </td>
+      
+      <td>
+      Appointment Time: <br><br><input type="text" style="width: 30px;">&emsp;/&emsp;<input type="text" style="width: 30px;">&emsp;/&emsp;<input type="text" style="width: 60px;"><br><br><br><br>
+      
+      Doctor Radius:&emsp;<input type="text" style='width:50px'> miles from me.<br><br><br><br>
+      
+      Provider Preference:<br><br>
+      <input type="text" style='width:100%; height: 200px;'><br><br>
+      
+      <center><a href="" type="button" class="btn btn-default btn-lg">Submit</a></center>
+      </td>
+      </tr>
+    
+    
+    
+    
+    
+    
+    </table>
+    
+    </article>
 
   </body>
 

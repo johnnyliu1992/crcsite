@@ -24,6 +24,12 @@
           padding: 0;
           display: inline-block;
             }
+      article {
+          margin-left: 170px;
+          border-top: 1px white;
+          padding: 1em;
+          overflow: hidden;
+            }
       .button {
           color: black;
           padding: 10px;
@@ -54,8 +60,25 @@
           border-collapse: collapse;
             }         
       td, th {
-          text-align: left;
+          text-align: center;
           padding: 0px 50px 20px 50px;
+            }
+      h1 {
+          font-family: "Arial Black", Gadget, sans-serif;
+          text-align: center;
+            }
+      h3 {
+          font-family: "Arial Black", Gadget, sans-serif;
+          text-align: center;
+            }
+      ol {
+          display: inline-block;
+          text-align: left;
+          font-size: 200%;
+          font-family: "Times New Roman", Times, serif;
+            }
+      li {
+          margin: 30px 0;
             }
     
     </style>
@@ -75,39 +98,41 @@
     </center>
     </nav>
     
+    <article>
     <br><br><br>
     <center>
     <h1>Recommended Screening Methods</h1>
+    
     <br><br><br>
-    <table>
-      <tr>
-        <td>
-        <h1>1. First Recommendation</h1>
-        </td>
-        <td>
-        <a type="button" class="btn btn-warning">Pros and Cons</a>  <a type="button" class="btn btn-info">Preparation</a>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-        <h1>2. Second Recommendation</h1>
-        </td>
-        <td>
-        <a type="button" class="btn btn-warning">Pros and Cons</a>  <a type="button" class="btn btn-info">Preparation</a>
-        </td>
-      </tr>
+    
+    
+    <ol>
+      <li>
+        Fecal immuno-chemical test (FIT)<br>
+        <a type="button" class="btn btn-default">What This Method Does</a> 
+        &emsp; <a type="button" class="btn btn-default">Test Outcomes</a>
+        &emsp; <a type="button" class="btn btn-default">Rational</a>
+      </li>
       
-      <tr>
-        <td>
-        <h1>3. Third Recommendation</h1>
-        </td>
-        <td>
-        <a type="button" class="btn btn-warning">Pros and Cons</a>  <a type="button" class="btn btn-info">Preparation</a>
-        </td>
-      </tr>    
-    </table>
+      <li>
+        Flexible sigmoidoscopy<br>
+        <a type="button" class="btn btn-default">What This Method Does</a> 
+        &emsp; <a type="button" class="btn btn-default">Test Outcomes</a>
+        &emsp; <a type="button" class="btn btn-default">Rational</a>
+      </li>
+      
+      <li>
+        High-sensitivity guaiac-based fecal occult blood test (gFOBT)<br>
+        <a type="button" class="btn btn-default">What This Method Does</a> 
+        &emsp; <a type="button" class="btn btn-default">Test Outcomes</a>
+        &emsp; <a type="button" class="btn btn-default">Rational</a>
+      </li>
+    </ol>
     </center>
+    
+    <a href="{% url 'appo' %}" class="btn btn-default btn-lg" style="position: absolute; right: 100px;">Next Step >></a>
+
+    </article>
   
   
   

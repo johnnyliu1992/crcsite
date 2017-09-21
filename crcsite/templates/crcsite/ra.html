@@ -73,6 +73,17 @@
           text-align: left;
           padding: 12px;
             }
+      h1 {
+          font-family: "Arial Black", Gadget, sans-serif;
+          text-align: center;
+            }
+      h3 {
+          font-family: "Arial Black", Gadget, sans-serif;
+          text-align: center;
+            }
+      li {
+          margin: 20px 0;
+            }
     
     </style>
   </head>
@@ -93,84 +104,109 @@
   
   
     <article>
-      <center><h1>CRC Risk Assessment<h1></center>
-      <br><br>
-      <table>
-        
-        <tr>
-          <td>1. How many of your first-degree relatives have colorectal cancer?<br>
-          <input type="text" style="width: 30px;"
-          </td>
-          <td>7. What is your processed meat consumption per day?<br>
-          <input type="checkbox"><50g
-          <input type="checkbox">>=50g
-          <input type="checkbox">I don't know
-          </td>
-        </tr>
-        
-        <tr>
-          <td>2. Did you have inflammatory bowel disease?<br>
-          <input type="checkbox">Yes
-          <input type="checkbox">No
-          <input type="checkbox">I don't know
-          </td>
-          <td>8. Do you smoke?<br>
-          <input type="checkbox">Yes
-          <input type="checkbox">No
-          <input type="checkbox">I don't know
-          </td>
-        </tr>
-        
-        <tr>
-          <td>3. Do you have diabetes?<br>
-          <input type="checkbox">Yes
-          <input type="checkbox">No
-          <input type="checkbox">I don't know
-          </td>
-          <td>9. Do you do physical activities about colon?<br>
-          <input type="checkbox">Yes
-          <input type="checkbox">No
-          <input type="checkbox">I don't know
-          </td>
-        </tr>
-        
-        <tr>
-          <td>4. What is your alcohol consumption on daily average?<br>
-          <input type="checkbox"><2 drinks
-          <input type="checkbox">2-3 drinks
-          <input type="checkbox">>3 drinks
-          </td>
-          <td>10. What is your dairy consumption per day?<br>
-          <input type="checkbox"><400g
-          <input type="checkbox">>=400g
-          <input type="checkbox">I don't know
-          </td>
-        </tr>
-        
-        <tr>
-          <td>5. Do you have obesity?<br>
-          <input type="checkbox">Yes
-          <input type="checkbox">No
-          <input type="checkbox">I don't know
-          </td>
-          <td>11. What is your milk consumption per day?<br>
-          <input type="checkbox"><200g
-          <input type="checkbox">>=200g
-          <input type="checkbox">I don't know
-          </td>
-        </tr>
-        
-        <tr>
-          <td>6. What is your red meat consumption per day?<br>
-          <input type="checkbox"><100g
-          <input type="checkbox">>=100g
-          <input type="checkbox">I don't know
-          </td>
-        </tr>
-        
-      </table>
-      <br><br><br>
-      <center><a href="{% url 'raresult' %}" type="button" class="btn btn-success btn-lg">Submit</a></center>
+      <br>
+      <center><h1><bold>CRC Risk Assessment</bold><h1></center>
+      <br>
+        <table>
+          <tr>
+          <td>      
+          <h3>Heredity and medical history</h3><br>
+          
+          <ol>
+          <li>
+          How many of your first-degree relatives have colorectal cancer?<br>
+          <input type="text" style="width: 30px;">
+          </li>
+          
+          <li>
+          Did you have inflammatory bowel disease?<br>
+          <input type="radio" name="Q2">Yes
+          <input type="radio" name="Q2">No
+          <input type="radio" name="Q2">I don't know
+          </li>
+          
+          <li>
+          Do you have diabetes?<br>
+          <input type="radio" name="Q3">Yes
+          <input type="radio" name="Q3">No
+          <input type="radio" name="Q3">I don't know
+          </li>
+          </ol>
+          
+          <br>
+          <h3>Heredity and medical history</h3>
+          
+          <ol>
+          <li>
+          What is your alcohol consumption on daily average?<br>
+          <input type="radio" name="Q4"><2 drinks
+          <input type="radio" name="Q4">2-3 drinks
+          <input type="radio" name="Q4">>3 drinks
+          </li>
+          
+          <li>
+          Do you have obesity?<br>
+          <input type="radio" name="Q5">Yes
+          <input type="radio" name="Q5">No
+          <input type="radio" name="Q5">I don't know
+          </li>
+          
+          <li>
+          What is your red meat consumption per day?<br>
+          <input type="radio" name="Q6"><100g
+          <input type="radio" name="Q6">>=100g
+          <input type="radio" name="Q6">I don't know
+          </li>
+          </ol>
+          <td>
+          
+          
+          <td valign="top">
+          <ol start="4">
+          <li>
+          What is your processed meat consumption per day?<br>
+          <input type="radio" name="Q7"><50g
+          <input type="radio" name="Q7">>=50g
+          <input type="radio" name="Q7">I don't know
+          </li>
+          
+          <li>
+          Do you smoke?<br>
+          <input type="radio" name="Q8">Yes
+          <input type="radio" name="Q8">No
+          <input type="radio" name="Q8">I don't know
+          </li>
+          
+          <li>
+          Do you do physical activities about colon?<br>
+          <input type="radio" name="Q9">Yes
+          <input type="radio" name="Q9">No
+          <input type="radio" name="Q9">I don't know
+          </li>
+         
+          <li>
+          What is your dairy consumption per day?<br>
+          <input type="radio" name="Q10"><400g
+          <input type="radio" name="Q10">>=400g
+          <input type="radio" name="Q10">I don't know
+          </li>
+          
+          <li>
+          What is your milk consumption per day?<br>
+          <input type="radio" name="Q11"><200g
+          <input type="radio" name="Q11">>=200g
+          <input type="radio" name="Q11">I don't know
+          </li>
+          </ol>
+          <br>
+          <center><a href="{% url 'raresult' %}" type="button" class="btn btn-default btn-lg">Submit</a></center>
+          <td>
+          
+          
+          
+        <tr>  
+      </table>    
+      
       
       
     </article>

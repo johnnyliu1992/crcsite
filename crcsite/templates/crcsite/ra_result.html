@@ -74,10 +74,24 @@
           font-family: "Arial Black", Gadget, sans-serif;
           text-align: center;
             }
-
-       ul {
+      h3 {
+          font-family: "Arial Black", Gadget, sans-serif;
+          text-align: center;
+          font-size: 25;
+            }
+       ol {
           display: inline-block;
-           text-align: left;
+          text-align: left;
+            }
+       li {
+          font-size: 17;
+       
+       
+          }
+       p {
+          text-align: left;
+          line-height: 100%;
+          font-size: 15;
             }
 
     </style>
@@ -89,24 +103,24 @@
     <nav>
     <center>
     <h2><a href="{% url 'index' %}" class="button" ">Home</a></h2>
-    <h2><a href="{% url 'ra' %}" class="active">Risk Assessment</a></h2>
-    <h2><a href="{% url 'appo' %}" class="button">Appointment</a></h2>
-    <h2><a href="{% url 'screen' %}" class="button">Screening</a></h2>
-    <h2><a href="{% url 'treatment' %}" class="button">Treatment</a></h2>
-    <h2><a href="{% url 'others' %}" class="button">Others</a></h2>
+    <h2><a href="{% url 'ra' %}" class="active">CRC Risk Assessment</a></h2>
+    <h2><a href="{% url 'appo' %}" class="button">Schedule an Appointment</a></h2>
+    <h2><a href="{% url 'screen' %}" class="button">CRC Screening</a></h2>
+    <h2><a href="{% url 'treatment' %}" class="button">CRC Treatment</a></h2>
+    <h2><a href="{% url 'others' %}" class="button">Other Resources</a></h2>
     </center>
     </nav>
   
     <article>
-    <br><br><br><br>
+    <br><br><br>
     
     
     <center>
-    <h1>CRC Risk Assessment Result</h1>
-    <br><br><br><br><br>
-    <h2>Risk Score: 9.7</h2>
+    <h1>CRC Risk Assessment Results</h1>
+    <br><br><br>
+    <h3>CRC Risk Score: 9.7</h3>
     
-    <h2>Risk Level: <font color="red">High</font></h2>
+    <h3>CRC Risk Level: <font color="red">High</font></h3>
     </center>
     
     
@@ -114,28 +128,39 @@
     <br>
     
     <center>
-    <ul>
+    <h4>Learn more about your CRC risk assessment:</h4>
+    
+    <ol>
     <li>
-    <a onclick="window.open('{% url 'explain' %}')">What does it mean?</a>
+    <a onclick="window.open('{% url 'explain' %}')">What does the score mean?</a>
     </li>
     
     <li>
-    <a onclick="window.open('')">Risk Factors</a>
+    <a onclick="window.open('')">What does the risk level imply?</a>
     </li>
     
     <li>
-    <a onclick="window.open('')">Recommendations For Preventative Care</a>
+    <a onclick="window.open('')">What are your important risk factors?</a>
     </li>
-    </ul>
+    
+    <li>
+    <a onclick="window.open('')">How to reduce your risk level?</a><p>(Recommendations for preventative care)</p>
+    </li>
+    
+    <li>
+    <a onclick="window.open('')">What are your next steps? </a>
+    </li>
+    
+    
+    </ol>
     </center>
     
-    <br><br><br><br>
+  
     
-    <a href="{% url 'screen' %}" class="btn btn-default btn-lg" style="position: absolute; right: 100px;">Next Step >></a>
  
     
     
-    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
     <center>
     <table>
       <tr>

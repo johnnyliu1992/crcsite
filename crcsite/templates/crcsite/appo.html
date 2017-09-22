@@ -70,10 +70,21 @@
       td, th {
           border: 0px solid gray;
           text-align: left;
-          padding: 12px;
-          line-height: 90%;
+          padding: 30px;
           vertical-align: top;
+          line-height: 120%;
+          width: 50%;
             }
+      h3 {
+          font-family: "Arial Black", Gadget, sans-serif;
+          text-align: center;
+          line-height: 90%;
+            }
+      p {
+          font-size: 14;
+          text-align: center;
+      
+          }
     </style>
   </head>
 
@@ -83,53 +94,55 @@
     <nav>
     <center>
     <h2><a href="{% url 'index' %}" class="button" ">Home</a></h2>
-    <h2><a href="{% url 'ra' %}" class="button">Risk Assessment</a></h2>
-    <h2><a href="{% url 'appo' %}" class="active">Appointment</a></h2>
-    <h2><a href="{% url 'screen' %}" class="button">Screening</a></h2>
-    <h2><a href="{% url 'treatment' %}" class="button">Treatment</a></h2>
-    <h2><a href="{% url 'others' %}" class="button">Others</a></h2>
+    <h2><a href="{% url 'ra' %}" class="button">CRC Risk Assessment</a></h2>
+    <h2><a href="{% url 'appo' %}" class="active">Schedule an Appointment</a></h2>
+    <h2><a href="{% url 'screen' %}" class="button">CRC Screening</a></h2>
+    <h2><a href="{% url 'treatment' %}" class="button">CRC Treatment</a></h2>
+    <h2><a href="{% url 'others' %}" class="button">Other Resources</a></h2>
     </center>
     </nav>
     <article>
     
-    <h1>Appointment</h1><br>
+    <h1>Appointment</h1>
     
     <table>
       <tr>
       <td>
-      First Name: <input type="text" style='width:100%'><br><br>
+      <h3>Provider Preference</h3>
       
-      Last Name: <input type="text" style='width:100%'><br><br>
+      Specialty: <input type="text" style='width:100%' placeholder="e.g. colon, rectal, anal... "><br><br>
       
-      Gender: &emsp;<input type="radio" name="gender">Male
+      <input type="radio" name="gender">Male
               <input type="radio" name="gender">Female<br><br>
       
-      Email: <input type="text" style='width:100%'><br><br>
+      Preferred Healthcare Organization: <input type="text" style='width:100%' placeholder="e.g. IU Health, St Vincent..."><br><br>
       
-      Mobile: <input type="text" style='width:100%'><br><br>
+      <h3>Location Preference</h3>
       
-      Street Address1: <input type="text" style='width:100%'><br><br>
+      City or Zipcode: <input type="text" style='width:100%' placeholder="e.g. Indianapolis, 46202... "><br><br>
       
-      Street Address2: <input type="text" style='width:100%'><br><br>
+      Radius:&emsp;<input type="text" style='width:50px'> miles from me.<br><br>
       
-      City: <input type="text" style='width:100%'><br><br>
+      <h3>Patient Insurance Plan</h3>
       
-      State: <input type="text" style='width:100%'><br><br>
+      <input type="text" style='width:100%' placeholder="Please type in your insurance plan number.">
       
-      Zip: <input type="text" style='width:100%'><br><br>
-      
-      Country: <input type="text" style='width:100%'><br><br>
       </td>
       
       <td>
-      Appointment Time: <br><br><input type="text" style="width: 30px;">&emsp;/&emsp;<input type="text" style="width: 30px;">&emsp;/&emsp;<input type="text" style="width: 60px;"><br><br><br><br>
       
-      Doctor Radius:&emsp;<input type="text" style='width:50px'> miles from me.<br><br><br><br>
+      <h3>Appointment Time</h3>
       
-      Provider Preference:<br><br>
-      <input type="text" style='width:100%; height: 200px;'><br><br>
+      
+      
+      From: <br><input type="text" style="width: 40px;" placeholder="MM">&emsp;/&emsp;<input type="text" style="width: 40px;" placeholder="DD">&emsp;/&emsp;<input type="text" style="width: 60px;"placeholder="YYYY"><br><br>
+      To: <br><input type="text" style="width: 40px;" placeholder="MM">&emsp;/&emsp;<input type="text" style="width: 40px;" placeholder="DD">&emsp;/&emsp;<input type="text" style="width: 60px;"placeholder="YYYY"><br><br>
+      
+      Time Preference: &emsp;<input type="radio" name="gender">Morning&emsp;
+              <input type="radio" name="gender">Afternoon<br><br><br><br><br><br>
       
       <center><a href="" type="button" class="btn btn-default btn-lg">Submit</a></center>
+      <p>(To list the providers satisfying your requests.)</p>
       </td>
       </tr>
     

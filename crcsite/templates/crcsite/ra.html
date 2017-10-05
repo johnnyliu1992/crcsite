@@ -80,6 +80,8 @@
           border: 0px solid gray;
           text-align: left;
           padding: 12px;
+          font-weight: 900;
+          line-height: 170%;
             }
       h1 {
           font-family: "Arial Black", Gadget, sans-serif;
@@ -89,9 +91,17 @@
           font-family: "Arial Black", Gadget, sans-serif;
           text-align: center;
             }
-      li {
-          margin: 20px 0;
-            }
+      
+      div {
+          display: inline-block;      
+      }
+       ul li {
+          display: inline-block;
+          font-family: "Microsoft YaHei";
+          font-weight: 9;
+          text-align: left;
+
+}
       
     
     </style>
@@ -114,6 +124,7 @@
   
     <article>
       <br>
+      <form action="{% url 'raresult' %}" method="GET">
       <center><h1><bold>CRC Risk Assessment</bold><h1></center>
       <br>
         <table>
@@ -129,17 +140,13 @@
           
           <li>
           Did you have inflammatory bowel disease?<br>
-          <input type="radio" name="Q2">Yes
-          &emsp;<input type="radio" name="Q2">No
-          &emsp;<input type="radio" name="Q2">I don't know
           </li>
-          
+          {{ form.q12 }}
+         
           <li>
           Do you have diabetes?<br>
-          <input type="radio" name="Q3">Yes
-          &emsp;<input type="radio" name="Q3">No
-          &emsp;<input type="radio" name="Q3">I don't know
           </li>
+          {{ form.q13 }}
           </ol>
           
           
@@ -148,24 +155,18 @@
           <ol>
           <li>
           What is your alcohol consumption on daily average?<br>
-          <input type="radio" name="Q4"><2 drinks
-          &emsp;<input type="radio" name="Q4">2-3 drinks
-          &emsp;<input type="radio" name="Q4">>3 drinks
           </li>
+          {{ form.q21 }}
           
           <li>
           Do you have obesity?<br>
-          <input type="radio" name="Q5">Yes
-          &emsp;<input type="radio" name="Q5">No
-          &emsp;<input type="radio" name="Q5">I don't know
           </li>
+          {{ form.q22 }}
           
           <li>
           What is your red meat consumption per day?<br>
-          <input type="radio" name="Q6"><100g
-          &emsp;<input type="radio" name="Q6">>=100g
-          &emsp;<input type="radio" name="Q6">I don't know
           </li>
+          {{ form.q23 }}
           </ol>
           <td>
           
@@ -174,52 +175,45 @@
           <ol start="4">
           <li>
           What is your processed meat consumption per day?<br>
-          <input type="radio" name="Q7"><50g
-          &emsp;<input type="radio" name="Q7">>=50g
-          &emsp;<input type="radio" name="Q7">I don't know
           </li>
+          {{ form.q24 }}
           
           <li>
           Do you smoke?<br>
-          <input type="radio" name="Q8">Yes
-          &emsp;<input type="radio" name="Q8">No
-          &emsp;<input type="radio" name="Q8">I don't know
           </li>
+          {{ form.q25 }}
           
-          <li>
-          Do you do physical activities about colon?<br>
-          <input type="radio" name="Q9">Yes
-          &emsp;<input type="radio" name="Q9">No
-          &emsp;<input type="radio" name="Q9">I don't know
-          </li>
+          
           </ol>
           
           <h3>Factors decrease risks</h3>
           
           <ol>
           <li>
-          What is your dairy consumption per day?<br>
-          <input type="radio" name="Q10"><400g
-          &emsp;<input type="radio" name="Q10">>=400g
-          &emsp;<input type="radio" name="Q10">I don't know
+          Do you do physical activities?<br>
           </li>
+          {{ form.q31 }}
+          
+          <li>
+          What is your dairy consumption per day?<br>
+          </li>
+          {{ form.q32 }}
           
           <li>
           What is your milk consumption per day?<br>
-          <input type="radio" name="Q11"><200g
-          &emsp;<input type="radio" name="Q11">>=200g
-          &emsp;<input type="radio" name="Q11">I don't know
           </li>
+          {{ form.q33 }}
+          
           </ol>
           <br>
-          <center><bold><a href="{% url 'raresult' %}" class="submit">  Submit  </a></bold></center>
+          <center><bold><input type="submit" class="submit"></bold></center>
+          </form>
           <td>
           
           
           
         <tr>  
       </table>    
-      
       
       
     </article>

@@ -1,5 +1,4 @@
 from django import forms
-import embedded_media as emb
 
 Q12=(
 	(1.7, "Yes"),

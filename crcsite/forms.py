@@ -1,15 +1,18 @@
+from django.db import models
+from django.forms import ModelForm
 from django import forms
+from crcsite.models import Question, Answer
 
 Q12=(
-	(1.7, "Yes"),
-	(1, "No"),
-	(1, "I don't know"),
+	("1.7", "Yes"),
+	("1", "No"),
+	("1", "I don't know"),
 )
 
 Q13=(
-	(1.3, "Yes"),
-	(1, "No"),
-	(1, "I don't know"),
+	("1.3", "Yes"),
+	("1", "No"),
+	("1", "I don't know"),
 )
 
 Q21=(
@@ -62,18 +65,24 @@ Q33=(
 
 
 class CRC(forms.Form):
-	q12=forms.ChoiceField(choices=Q12, widget=forms.RadioSelect())
-	q13=forms.ChoiceField(choices=Q13, widget=forms.RadioSelect())
-	q21=forms.ChoiceField(choices=Q21, widget=forms.RadioSelect())
-	q22=forms.ChoiceField(choices=Q22, widget=forms.RadioSelect())
-	q23=forms.ChoiceField(choices=Q23, widget=forms.RadioSelect())
-	q24=forms.ChoiceField(choices=Q24, widget=forms.RadioSelect())
-	q25=forms.ChoiceField(choices=Q25, widget=forms.RadioSelect())
-	q31=forms.ChoiceField(choices=Q31, widget=forms.RadioSelect())
-	q32=forms.ChoiceField(choices=Q32, widget=forms.RadioSelect())
-	q33=forms.ChoiceField(choices=Q33, widget=forms.RadioSelect())
+	q12=forms.ChoiceField(choices=Q12, widget=forms.RadioSelect(), initial="1")
+	q13=forms.ChoiceField(choices=Q13, widget=forms.RadioSelect(), initial="1")
+	q21=forms.ChoiceField(choices=Q21, widget=forms.RadioSelect(), initial="1")
+	q22=forms.ChoiceField(choices=Q22, widget=forms.RadioSelect(), initial="1")
+	q23=forms.ChoiceField(choices=Q23, widget=forms.RadioSelect(), initial="1")
+	q24=forms.ChoiceField(choices=Q24, widget=forms.RadioSelect(), initial="1")
+	q25=forms.ChoiceField(choices=Q25, widget=forms.RadioSelect(), initial="1")
+	q31=forms.ChoiceField(choices=Q31, widget=forms.RadioSelect(), initial="1")
+	q32=forms.ChoiceField(choices=Q32, widget=forms.RadioSelect(), initial="1")
+	q33=forms.ChoiceField(choices=Q33, widget=forms.RadioSelect(), initial="1")
 
-
+class QuestionForm(ModelForm):
+    class Meta:
+        model = Answer
+        fields = ('Q_ID', 'A_text')
+        widgets = {
+            'A_text': forms.RadioSelect(),
+        }
 
 #	qone=forms.ChoiceField(choices=QONE, widget=forms.RadioSelect())
 

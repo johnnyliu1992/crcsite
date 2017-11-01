@@ -9,7 +9,7 @@ from .models import Question, Answer
 class AnswerInline(admin.StackedInline):
     model = Answer
     extra = 3
-    list_display=('A_text')
+    list_display=('A_text', 'Value')
 
 
 class QuestionAdmin(admin.ModelAdmin):

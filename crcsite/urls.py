@@ -11,4 +11,5 @@ urlpatterns = [
                url(r'^screen/$', views.screen, name='screen'),
                url(r'^treatment/$', views.treatment, name='treatment'),
                url(r'^others/$', views.others, name='others'),
+               url(r'^api/jfj', views.jfj, name='jfj'),
                ]

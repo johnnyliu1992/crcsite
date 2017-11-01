@@ -50,6 +50,20 @@
           background-color: #555;
           color: white;
             }
+            
+       table {
+          font-family: arial, sans-serif;
+          font-size: 20;
+          border-collapse: collapse;
+          width: 70%;
+            }         
+      td, th {
+          border: 0px solid gray;
+          text-align: left;
+          padding: 15px;
+          font-weight: 900;
+          line-height: 170%;
+            }
     
     </style>
   </head>
@@ -66,9 +80,43 @@
     <h2><a href="{% url 'others' %}" class="active">Other Resources</a></h2>
     </center>
     </nav>
-  
-  
-  others
+    
+    
+    <article>
+    <center>
+    <br><br><br><br>
+    <table>
+      <tr>
+        <td><img src="{% static 'crcsite/ACS.png' %}" width="200" height="128"></td>
+        <td><a href="https://www.cancer.org">American Cancer Society</a></td>
+      </tr>
+      
+      <tr>
+        <td><img src="{% static 'crcsite/CCA.jpg' %}" width="200" height="128"></td>
+        <td><a href="https://www.ccalliance.org">American Cancer Society</a></td>
+      </tr>
+      
+      <tr>
+        <td><img src="{% static 'crcsite/iuhealth.png' %}" width="200" height="128"></td>
+        <td><a href="http://iuhealth.org">IU Health</a></td>
+      </tr>
+      
+      <tr>
+        <td><img src="{% static 'crcsite/NCI.jpg' %}" width="200" height="128"></td>
+        <td><a href="https://www.cancer.gov">National Cancer Institute</a></td>
+      </tr>
+    </table>
+    </center>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </article>
   
   
 

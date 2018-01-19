@@ -20,6 +20,11 @@ def ra(request):
     
 def raresult(request):
     if request.method=='GET':
+        rwc=request.GET.get('relative_with_cancer')
+        if rwc == '':
+            rwc=0
+        else:
+            rwc=float(rwc)
         q12=float(request.GET.get('q12'))
         q13=float(request.GET.get('q13'))
         q21=float(request.GET.get('q21'))
@@ -31,9 +36,9 @@ def raresult(request):
         q32=float(request.GET.get('q32'))
         q33=float(request.GET.get('q33'))
         #prepare score
-        score=q12+q13+q21+q22+q23+q24+q25+q31+q32+q33
+        score=q12+q13+q21+q22+q23+q24+q25+q31+q32+q33+0.5*rwc
         min=9.4
-        max=12.3
+        max=12.3+0.5*rwc
         score=((score-min)/(max-min))*10
         score=round(score, 2)
         #preppare level
@@ -80,6 +85,10 @@ def explain(request):
     
 def appo(request):
     return render(request, 'crcsite/appo.html')
+    
+def appoconfirm(request):
+    return render(request, 'crcsite/appoconfirm.html')
+
     
 def screen(request):
     return render(request, 'crcsite/screen.html')

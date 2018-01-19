@@ -8,6 +8,7 @@ urlpatterns = [
                url(r'^raresult/$', views.raresult, name='raresult'),
                url(r'^explain/$', views.explain, name='explain'),
                url(r'^appo/$', views.appo, name='appo'),
+               url(r'^appoconfirm/$', views.appoconfirm, name='appoconfirm'),
                url(r'^screen/$', views.screen, name='screen'),
                url(r'^treatment/$', views.treatment, name='treatment'),
                url(r'^others/$', views.others, name='others'),
